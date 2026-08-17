@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>時光閱覽 | Time Reading</title>
+
+    <!-- 連接 CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- 導覽列 -->
+    <header>
+        <div class="logo">
+            時光閱覽
+        </div>
+
+        <nav>
+            <a href="#home">首頁</a>
+            <a href="#books">書籍</a>
+            <a href="#about">關於我們</a>
+            <button class="cart-btn" id="cartButton">
+               🛒 購物車 
+               (<span id="cartCount">0</span>)
+            </button>
+        </nav>
+    </header>
+
+
+    <!-- 首頁主視覺 -->
+    <main>
+
+        <section class="hero" id="home">
+
+            <div class="hero-content">
+                <p class="subtitle">
+                    TIME TRAVEL THROUGH BOOKS
+                </p>
+
+                <h1>
+                    在文字裡<br>
+                    閱讀一段時光
+                </h1>
+
+                <p class="description">
+                    每一本書，都保存著一個世界。
+                    在時光閱覽，找到屬於你的故事。
+                </p>
+
+                <a href="#books" class="main-btn">
+                    開始探索
+                </a>
+            </div>
+
+        </section>
+
+
+        <!-- 精選書籍 -->
+        <section class="products" id="books">
+
+            <div class="section-title">
+                <p>FEATURED BOOKS</p>
+                <h2>精選書籍</h2>
+            </div>
+
+
+            <!-- 商品卡片 -->
+            <div class="product-grid">
+
+                <div class="product-card">
+
+                    <div class="book-image">
+                        <img 
+                            src="https://drive.google.com/thumbnail?id=1WVC-bj2Dowp_ikZFAjcE3wtB1OwaIe-c&sz=w1000"
+                            alt="給自己的微光航行"
+                        >
+                    </div>
+                    <h3>給自己的微光航行</h3>
+
+                    <p class="price">
+                        NT$ 350
+                    </p>
+
+                    <button class="add-cart" data-name="給自己的微光航行" data-price="350">
+                        加入購物車
+                    </button>
+
+                </div>
+
+
+                <div class="product-card">
+
+                    <div class="book-image">
+                        <img 
+                            src="https://drive.google.com/thumbnail?id=1HRRechgz1e132r_glh5SoxBTVlredFmZ&sz=w1000"
+                            alt="島嶼上的咖啡香"
+                        >
+                    </div>
+
+                    <h3>島嶼上的咖啡香</h3>
+
+                    <p class="price">
+                        NT$ 420
+                    </p>
+
+                    <button class="add-cart" data-name="島嶼上的咖啡香" data-price="420">
+                        加入購物車
+                    </button>
+
+                </div>
+
+
+                <div class="product-card">
+
+                    <div class="book-image">
+                        <img 
+                            src="https://drive.google.com/thumbnail?id=1lzlStSnMHRGZGt6dErb3pKUa4Rxj6WgU&sz=w1000"
+                            alt="慢城散步學"
+                        >
+                    </div>
+
+                    <h3>慢城散步學</h3>
+
+                    <p class="price">
+                        NT$ 280
+                    </p>
+
+                    <button class="add-cart" data-name="慢城散步學" data-price="280">
+                        加入購物車
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- 關於我們 -->
+        <section class="about" id="about">
+
+            <p>ABOUT TIME READING</p>
+
+            <h2>
+                書籍不只是文字，<br>
+                而是一段等待被發現的時光。
+            </h2>
+
+        </section>
+
+    </main>
+
+
+    <!-- 頁尾 -->
+    <footer>
+
+        <h3>時光閱覽</h3>
+
+        <p>
+            © 2026 Time Reading. All Rights Reserved.
+        </p>
+
+    </footer>
+    <div class="cart-panel" id="cartPanel">
+
+    <div class="cart-header">
+        <h2>購物車</h2>
+
+        <button id="closeCart">×</button>
+    </div>
+
+    <div id="cartItems">
+        <p class="empty-cart">購物車目前是空的</p>
+    </div>
+
+    <div class="cart-footer">
+
+        <h3>
+            總金額：
+            NT$ <span id="cartTotal">0</span>
+        </h3>
+
+        <button class="checkout-btn">
+            前往結帳
+        </button>
+
+    </div>
+
+</div>
+
+<!-- ===== 結帳視窗 ===== -->
+
+<div class="checkout-modal" id="checkoutModal">
+
+    <div class="checkout-box">
+
+        <button class="close-checkout" id="closeCheckout">
+            ×
+        </button>
+
+        <h2>結帳資料</h2>
+
+        <form id="checkoutForm">
+
+            <label>姓名</label>
+            <input type="text" id="customerName" required>
+
+
+            <label>Email</label>
+            <input type="email" id="customerEmail" required>
+
+
+            <label>收件地址</label>
+            <input type="text" id="customerAddress" required>
+
+
+            <button type="submit" class="confirm-order">
+                確認訂單
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+    <!-- 連接 JavaScript -->
+    
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
